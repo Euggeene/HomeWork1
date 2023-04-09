@@ -1,118 +1,85 @@
-﻿// // Напишите программу, которая на вход принимает число 
-// // и выдаёт его квадрат (число умноженное на само себя).
+﻿// HOMEWORK
 
-// // Например:
-// // 4 -> 16 
-// // -3 -> 9 
-// // -7 -> 49
-
-// Console.WriteLine("Введите число");
-
-// int number=Convert.ToInt32(Console.ReadLine());
-// // number = number*number;
-// number*=number;
-
-// Console.Write("Квадрат числа равен: ");
-// Console.WriteLine(number);
-
-// // Напишите программу, которая на вход принимает
-// //  два числа и проверяет, является ли первое число квадратом второго.
-// // a = 25, b = 5 -> да 
-// // a = 2, b = 10 -> нет 
-// // a = 9, b = -3 -> да 
-// // a = -3 b = 9 -> нет
-
-
-// Console.WriteLine("Введите число");
-// int number=Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите число");
-// int number2=Convert.ToInt32(Console.ReadLine());
-
-// if(number==number2*number2)
-// {
-//     Console.WriteLine("Число 1 является квадратом числа 2");
-// }
-// else
-// {
-//      Console.WriteLine("Число 1 не является квадратом числа 2");
-// }
-
-// // 3. Напишите программу, которая будет выдавать название дня недели по заданному номеру.
-// // 	3 -> Среда 
-// // 5 -> Пятница
-
-
-// Console.WriteLine("Введите число");
-// int number=Convert.ToInt32(Console.ReadLine());
-
-// if(number == 1)
-//     Console.WriteLine("Понедельник");
-
-// else if(number == 2)
-//     Console.WriteLine("Вторник");
-
-// else if(number == 3)
-//     Console.WriteLine("Среда");
-
-// else if(number == 4)
-//     Console.WriteLine("Вторник");
-
-// else if(number == 5)
-//     Console.WriteLine("Пятница");
-
-// else if(number == 6)
-//     Console.WriteLine("Суббота");
-
-// else if(number == 7)
-//     Console.WriteLine("Воскресенье");
-
-// else
-//     Console.WriteLine("Такого дня не существует");
-    
-
-// 5. Напишите программу, которая на вход принимает одно число
-//  (N), а на выходе показывает все целые числа в промежутке от -N до N.
-// 4 -> "-4, -3, -2, -1, 0, 1, 2, 3, 4" 
-// 2 -> " -2, -1, 0, 1, 2"
-
-// Console.WriteLine ("Введите первое число");
-// int number = Convert.ToInt32(Console.ReadLine());
-
-// int negNumber=-number;
-
-// while(number>=negNumber)
-// {
-//     Console.WriteLine(negNumber);
-//     negNumber++;
-// }
-
-
-// Деление
-
-// Console.WriteLine("Ввести число");
-// int n = Convert.ToInt32(Console.ReadLine());
-// int result = n%10;
-// Console.WriteLine(result);
-
-
-// HOMEWORK
 // Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт,
 // какое число большее, а какое меньшее.
 
-// a = 5; b = 7 -> max = 7
-// a = 2 b = 10 -> max = 10
-// a = -9 b = -3 -> max = -3
+// Console.WriteLine("Введите первое число");
+// int a=Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите второе число");
+// int b=Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите первое число");
-int a=Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите второе число");
-int b=Convert.ToInt32(Console.ReadLine());
+// if(b > a)
+// {
+//     Console.Write("Большее число: ");
+//     Console.WriteLine(b);
+// }
+// else
+// {
+//     Console.Write("Большее число: ");
+//     Console.WriteLine(a);
+// }
 
-if(b > a)
+// Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт
+// максимальное из этих чисел.
+
+// Console.WriteLine("Введите первое число");
+// int a=Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите второе число");
+// int b=Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите третье число");
+// int c=Convert.ToInt32(Console.ReadLine());
+// int max = a;
+
+// if (b > max)
+// {
+//     max = b;
+// }
+// if (c > max)
+// {
+//     max = c;
+// }
+//  Console.Write("Большее число: ");
+//  Console.WriteLine(max);
+
+// Задача 6: Напишите программу, которая на вход принимает число и выдаёт,
+// является ли число чётным (делится ли оно на два без остатка).
+
+// Console.WriteLine("Введите число");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int result = n%2;
+
+// if(result == 0)
+// {
+//     Console.Write(n);
+//     Console.WriteLine(" -чётное число");
+// }
+// else
+// {
+//     Console.Write(n);
+//     Console.WriteLine(" -нечётное число");
+// }
+
+// Задача 8: Напишите программу, которая на вход принимает число (N),
+// а на выходе показывает все чётные числа от 1 до N.
+// 5 -> 2, 4
+// 8 -> 2, 4, 6, 8
+
+Console.WriteLine("Введите число");
+int N = Convert.ToInt32(Console.ReadLine());
+int count = 2;
+if (N > 1)
 {
-    Console.WriteLine(b);
+    Console.Write("Чётные числа в диапазоне от 1 до ");
+    Console.Write(N);
+    Console.WriteLine(": ");
+
+    while (count <= N)
+    {    
+     Console.WriteLine(count);
+     count+=2;
+    }
 }
 else
 {
-     Console.WriteLine(a);
+     Console.WriteLine("Неверный диапазон");
 }
